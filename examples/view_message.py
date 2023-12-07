@@ -36,8 +36,9 @@ if __name__ == "__main__":
     parser.add_argument('--text', '-t', default='>>> No text set', help='Set text message')
     args = parser.parse_args()
 
-    while True:
+   
     try:
+        while True:
         output(args.cascaded, args.block_orientation, args.rotate, args.reverse_order, args.text)
     except KeyboardInterrupt:
         pass
