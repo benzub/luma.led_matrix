@@ -20,8 +20,8 @@ def output(n, block_orientation, rotate, inreverse, text):
                      rotate=rotate or 0, blocks_arranged_in_reverse_order=inreverse)
     print(text)
 
-    show_message(device, text, fill="white", font=proportional(CP437_FONT), scroll_delay=0.05)
-    time.sleep(1)
+    show_message(device, text, fill="white", font=proportional(CP437_FONT), scroll_delay=0.08)
+    time.sleep(0)
 
 
 if __name__ == "__main__":
