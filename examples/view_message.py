@@ -19,7 +19,7 @@ def output(n, block_orientation, rotate, inreverse, text):
     device = max7219(serial, cascaded=n or 1, block_orientation=block_orientation,
                      rotate=rotate or 0, blocks_arranged_in_reverse_order=inreverse)
     print(text)
-    while True:
+    
     
     show_message(device, text, fill="white", font=proportional(CP437_FONT), scroll_delay=0.08)
     time.sleep(0)
@@ -36,6 +36,7 @@ if __name__ == "__main__":
     parser.add_argument('--text', '-t', default='>>> No text set', help='Set text message')
     args = parser.parse_args()
 
+    while True:
     try:
         output(args.cascaded, args.block_orientation, args.rotate, args.reverse_order, args.text)
     except KeyboardInterrupt:
