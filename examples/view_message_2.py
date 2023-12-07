@@ -21,7 +21,7 @@ def output(n, block_orientation, rotate, inreverse, text):
     print(text)
 
     show_message(device, text, fill="white", font=proportional(CP437_FONT), scroll_delay=0.08)
-    time.sleep(0)
+    time.sleep(1)
 
 
 if __name__ == "__main__":
